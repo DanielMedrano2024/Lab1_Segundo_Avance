@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from . import models
+from .models import reservacion
 
 # Create your views here.
 
@@ -10,7 +11,7 @@ def index(request):
 def base(request):
     return render(request,"base.html")
 
-def reservacion(request):
+def form_reservacion(request):
     return render(request,"reservacion.html")
 
 def postreservacion(request):
@@ -38,7 +39,11 @@ def promociones(request):
     return render(request,"promociones.html")
 
 def recordatorios(request):
-    return render(request,"recordatorios.html")
+    # Obtener todas las reservaciones
+    reservaciones = reservacion.objects.all()
+    # Pasar las reservaciones al contexto
+    return render(request, "recordatorios.html", {"reservaciones": reservaciones})
+    #return render(request,"recordatorios.html")
 
 def inicio(request):
     return render(request,"inicio.html")
