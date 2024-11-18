@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Pagina De Recordatorios{% endblock %}
+
+{% block extra_styles %}
+<link rel="stylesheet" type="text/css" href="{% static 'App/recordatorios.css' %}">
+{% endblock %}
+
+{% block content %}
+<!-- Encabezado de la página -->
+<header class="text-center my-4">
+    <h1>Recordatorio de Cita Médica</h1>
+    <p>Recuerda tu próxima cita en la Clínica Salud Vida</p>
+</header>
+
+<!-- Contenedor del recordatorio -->
+<div class="container">
+    <div class="recordatorio-card">
+        <img src="{% static 'App/recordatorio.jpg' %}" alt="Doctor en la clínica" class="recordatorio-img">
+        <div class="recordatorio-content">
+            <h3>Detalles de tu Cita</h3>
+            <p><strong>Paciente:</strong> Juan Pérez</p>
+            <p><strong>Fecha:</strong> 12 de noviembre de 2024</p>
+            <p><strong>Hora:</strong> 10:30 AM</p>
+            <p><strong>Servicio:</strong> Consulta General</p>
+            <p><strong>Nota:</strong> Por favor, llega 10 minutos antes para completar el registro.</p>
+            <a href="#" class="confirm-button">Confirmar Asistencia</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
