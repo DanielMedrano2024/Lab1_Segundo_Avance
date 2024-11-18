@@ -50,5 +50,17 @@
         </div>
         <button type="submit" class="btn btn-primary">Reservar Cita</button>
     </form>
+    <br>
+    <br>
+    <div>
+        <h3>Deseo volver al inicio</h3>
+        <br>
+        <a href="{% url 'inicio' %}" class="btn btn-primary" style="padding: 5px 10px; font-size: 12px; width: auto;">Ir A Inicio</a>
+        <br><br>
+        <h3>Ya tengo cita y deseo revisar los detalles</h3>
+        <br>
+        <a href="{% url 'recordatorios' %}" class="btn btn-primary" style="padding: 5px 10px; font-size: 12px; width: auto;">Ver Mi Cita</a>
+    </div>
+    
 </div>
 {% endblock %}

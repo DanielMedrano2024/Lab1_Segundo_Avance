@@ -32,5 +32,13 @@
         </div>
     </div>
     {% endfor %}
+    <div>
+        <h3>Deseo volver al inicio</h3>
+        <a href="{% url 'inicio' %}" class="btn btn-primary" style="padding: 5px 10px; font-size: 12px; width: auto;">Ir A Inicio</a>
+        <br><br>
+        <h3>No tengo cita y deseo reservarla</h3>
+        <a href="{% url 'reservacion' %}" class="btn btn-primary" style="padding: 5px 10px; font-size: 12px; width: auto;">Reservar cita</a>
+        <br><br>
+    </div>
 </div>
 {% endblock %}
